@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Industrial / Solid / Earthy Palette */
+  
+  /* Background: Off-white/concrete */
+  --background: 210 20% 98%; 
+  /* Foreground: Dark Charcoal/Grey */
+  --foreground: 220 13% 18%;
+
+  /* Primary: Brick Red */
+  --primary: 358 75% 45%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary: Industrial Grey */
+  --secondary: 220 13% 18%;
+  --secondary-foreground: 210 40% 98%;
+
+  /* Muted: Concrete Grey */
+  --muted: 210 20% 90%;
+  --muted-foreground: 215 16% 40%;
+
+  /* Accent: Safety Orange/Rust (subtle highlights) */
+  --accent: 25 90% 55%;
+  --accent-foreground: 210 40% 98%;
+
+  /* Destructive: Bright Red */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Border: Light Grey */
+  --border: 214 32% 85%;
+  --input: 214 32% 85%;
+  --ring: 358 75% 45%;
+
+  /* Fonts */
+  --font-display: 'Anton', sans-serif; /* Strong, industrial headline font */
+  --font-body: 'Inter', sans-serif;    /* Clean, legible body font */
+
+  --radius: 0.25rem; /* Sharp, boxy corners fit the industrial theme better */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply uppercase tracking-wide text-secondary;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded hover:bg-muted-foreground/50 transition-colors;
+}
+
+/* AOS overrides if needed */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Booking Calendar Styling */
+.booking-calendar-wrapper {
+  @apply rounded-sm overflow-hidden;
+}
+
+.booking-calendar-wrapper button {
+  @apply rounded-sm font-bold uppercase tracking-wide transition-all;
+}
+
+.booking-calendar-wrapper .react-calendar {
+  @apply w-full border-0;
+}
+
+.booking-calendar-wrapper .react-calendar__tile--active {
+  background: hsl(var(--primary)) !important;
+}
+
+.booking-calendar-wrapper .react-calendar__tile:hover {
+  background: hsl(var(--primary) / 0.1) !important;
+}

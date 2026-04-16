@@ -1,0 +1,94 @@
+----
+## 28.12.25-16:10 - replit - lg-12.12.25-phase1-sites
+----
+# Website Prompt: Ryan’s Plumbing (Pool Specialists)
+
+**Goal:** Create a professional, high-converting landing page for "Ryan’s Plumbing". **Note:** Based on the assets and research, this business specializes in **Pool Plumbing and Maintenance**. The site should reflect this niche.
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+- **`react-booking-calendly`** (REQUIRED for appointments)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.jpg` (IMPORTANT: Apply CSS `rounded-full` to make this a circular logo).
+- `cool-company-car-banner.jpg`
+- `plumber-at-work.jpg`
+- `pipes.jpg`
+- `before-dirty-pool.jpg`
+- `after-cleen-pool.jpg`
+
+## Structure & Content
+
+### 1. Global Features
+- **Bilingual Support:** 
+  - Languages: English (EN) and Ukrainian (UA).
+  - Toggle: Add a switch in the navbar.
+  - Auto-detect: If user locale is UA, default to UA. Otherwise EN.
+
+### 2. Header
+- **Logo:** Display `favicon.jpg` as a circle next to the text "Ryan’s Plumbing & Pools".
+- **Navigation:** Home, Pool Services, Repairs, Contact.
+- **Controls:** Language Toggle (EN/UA), "Request Service" button.
+
+### 3. Hero Section
+- **Background:** `cool-company-car-banner.jpg` with a blue/water-themed overlay.
+- **Headline:** "Knoxville's Premier Pool Plumbing Experts."
+- **Subheadline:** "From leak detection to full filtration repairs, we keep your pool crystal clear."
+- **CTA:** "Schedule Pool Service" (Scrolls to appointment).
+- **Animation:** Fade up.
+
+### 4. Services (Cards)
+*Focus on the Pool/Plumbing intersection.*
+- **Pool Pump Repair:** Fix noisy or broken pumps fast.
+- **Leak Detection:** Advanced technology to find hidden leaks.
+- **Filtration Systems:** Installation and repair of filters/pipes.
+- **General Plumbing:** Pipe repair and maintenance for outdoor systems.
+- **Seasonal Maintenance:** Opening and closing services.
+
+### 5. Transformation (Before & After)
+*Use the provided pool images to tell a story.*
+- **Headline:** "From Green to Clean."
+- **Visual:** A side-by-side comparison component.
+  - **Left:** `before-dirty-pool.jpg` (Label: "Before").
+  - **Right:** `after-cleen-pool.jpg` (Label: "After").
+- **Text:** "Don't let a plumbing issue ruin your summer. We restore your pool to perfection."
+- **Animation:** Slide in from sides.
+
+### 6. Gallery / At Work
+- Display `plumber-at-work.jpg` and `pipes.jpg` to show technical expertise.
+- **Caption:** "Expert craftsmanship on every job."
+
+### 7. Testimonials
+*Realistic placeholders (since specific ones weren't found):*
+1. "Ryan saved our summer! He fixed a major pump leak that other plumbers couldn't figure out." — *Jennifer M.*
+2. "Professional, on time, and the pool looks amazing. Highly recommend for any pool plumbing needs." — *Tom Baker*
+3. "Great service and fair pricing. Finally found a reliable pool guy in Knoxville." — *Sarah K.*
+
+### 8. Appointment Scheduling (CRITICAL)
+- **Library:** **`react-booking-calendly`** (or similar visual calendar).
+- **Functionality:**
+  - Visual date/time picker.
+  - **Availability:** Mon-Sat, 8 AM - 5 PM.
+  - **Action:** User selects slot -> Confirms.
+  - **Feedback:** Show a success animation (e.g., water splash or checkmark) and alert: "Service Booked for [Date] at [Time]!"
+- **Constraint:** **NO BACKEND**. **NO DATABASE**. Handle state locally.
+
+### 9. Location & Contact
+- **Address:** Knoxville, TN
+- **Phone:** +1 865-742-5355
+- **Socials:**
+  - Facebook: https://www.facebook.com/ryanpoolstn/
+  - Instagram: https://www.instagram.com/best__plumber/
+- **Map:** Embed Google Maps (CID: 10742244696617219010).
+
+### 10. Footer
+- Copyright © 2025 Ryan’s Plumbing.
+- Logo: Circular `favicon.jpg`.
+
+## Design Guidelines
+- **Theme:** Refreshing, clean, aquatic (Cyan, Blue, White).
+- **Animations:** AOS library for engaging scroll effects.
+- **Simplicity:** **NO BACKEND**. **NO TESTING**. Frontend demo only.

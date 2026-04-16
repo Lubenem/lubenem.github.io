@@ -1,0 +1,87 @@
+----
+## 28.12.25-16:30 - replit - lg-12.12.25-phase1-sites
+----
+# Website Prompt: Northern Generations Roofing & Remodeling
+
+**Goal:** Create a sturdy, professional, and trustworthy landing page for "Northern Generations Roofing & Remodeling". This is a demo site, so keep the implementation straightforward (no complex backend).
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+- **`react-booking-calendly`** (REQUIRED for appointments)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.jpg` (IMPORTANT: Apply CSS `rounded-full` to make this a circular logo).
+- `crew-on-roof-banner.jpg`
+- `roof-top-down-cool-angle.jpg`
+- `roofer-at-work.jpg`
+- `roofer-at-work-2.jpg`
+
+## Structure & Content
+
+### 1. Global Features
+- **Bilingual Support:** 
+  - Languages: English (EN) and Ukrainian (UA).
+  - Toggle: Add a switch in the navbar.
+  - Auto-detect: If user locale is UA, default to UA. Otherwise EN.
+
+### 2. Header
+- **Logo:** Display `favicon.jpg` as a circle next to the text "Northern Generations".
+- **Navigation:** Home, Services, Projects, Contact.
+- **Controls:** Language Toggle (EN/UA), "Free Inspection" button.
+
+### 3. Hero Section
+- **Background:** `crew-on-roof-banner.jpg` with a dark overlay.
+- **Headline:** "Built to Last. Generations of Quality."
+- **Subheadline:** "Premier roofing and remodeling services in Wauwatosa and beyond."
+- **CTA:** "Get a Free Estimate" (Scrolls to appointment).
+- **Animation:** Strong fade up.
+
+### 4. Services (Cards)
+*Use Lucide icons (e.g., Home, Hammer, Shield).*
+- **Roof Replacement:** Durable materials and expert installation.
+- **Roof Repair:** Fix leaks and storm damage fast.
+- **Siding & Gutters:** Complete exterior protection.
+- **Remodeling:** Transform your home with our renovation experts.
+- **Emergency Tarping:** 24/7 protection when disaster strikes.
+
+### 5. Our Work (Gallery)
+*Showcase the craftsmanship.*
+- **Featured Image:** `roof-top-down-cool-angle.jpg` (Large, impressive shot).
+- **Grid:** `roofer-at-work.jpg` and `roofer-at-work-2.jpg` showing the team in action.
+- **Caption:** "Precision in every shingle."
+- **Animation:** Zoom in on scroll.
+
+### 6. Testimonials
+*Realistic placeholders (since specific ones weren't accessible):*
+1. "The crew was amazing! They finished our roof in two days and left the yard spotless." — *Michael T.*
+2. "Honest pricing and great communication. Northern Generations is the only roofer I trust." — *Sarah Jenkins*
+3. "We hired them for a remodel and ended up doing the roof too. Excellent quality all around." — *David K.*
+
+### 7. Appointment Scheduling (CRITICAL)
+- **Library:** **`react-booking-calendly`** (or similar visual calendar).
+- **Functionality:**
+  - Visual date/time picker.
+  - **Availability:** Mon-Sat, 7 AM - 6 PM.
+  - **Action:** User selects slot -> Confirms.
+  - **Feedback:** Show a success animation (e.g., hammer tap or checkmark) and alert: "Inspection Scheduled for [Date] at [Time]!"
+- **Constraint:** **NO BACKEND**. **NO DATABASE**. Handle state locally.
+
+### 8. Location & Contact
+- **Address:** 6326 W Bluemound Rd, Wauwatosa, WI 53213
+- **Phone:** +1 262-202-2481
+- **Socials:**
+  - Facebook: https://www.facebook.com/northerngenerationsconstruction/
+  - Instagram: https://www.instagram.com/zs_llc/
+- **Map:** Embed Google Maps (CID: 10955438915292782826).
+
+### 9. Footer
+- Copyright © 2025 Northern Generations Roofing & Remodeling.
+- Logo: Circular `favicon.jpg`.
+
+## Design Guidelines
+- **Theme:** Industrial, solid, earthy (Dark Grey, Brick Red, White).
+- **Animations:** AOS library for engaging scroll effects.
+- **Simplicity:** **NO BACKEND**. **NO TESTING**. Frontend demo only.

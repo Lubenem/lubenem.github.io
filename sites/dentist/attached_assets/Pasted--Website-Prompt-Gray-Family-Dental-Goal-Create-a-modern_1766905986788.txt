@@ -1,0 +1,82 @@
+# Website Prompt: Gray Family Dental
+
+**Goal:** Create a modern, simple, and responsive landing page for "Gray Family Dental". This is a demo site, so keep the implementation straightforward (no complex backend).
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.png`
+- `clinic-exterior.jpg`
+- `clinic-Interior.jpg`
+- `crew-group-picture.jpg`
+
+## Structure & Content
+
+### 1. Header
+- **Logo:** "Gray Family Dental" (Text or simple icon)
+- **Navigation:** Home, Services, Testimonials, Contact
+- **CTA Button:** "Book Now"
+
+### 2. Hero Section
+- **Background:** Use `clinic-exterior.jpg` or a nice gradient overlay.
+- **Headline:** "Your Smile, Our Passion."
+- **Subheadline:** "Compassionate dental care for the whole family in Detroit, MI."
+- **CTA:** "Schedule Appointment" (Scrolls to appointment section)
+- **Animation:** Fade up on load.
+
+### 3. About / Intro
+- **Image:** `crew-group-picture.jpg`
+- **Text:** Brief welcome message about the friendly team and comfortable environment.
+- **Animation:** Slide in from left/right.
+
+### 4. Services (Grid Layout)
+*Use icons for each service.*
+- **General Dentistry:** Checkups, cleanings, and prevention.
+- **Cosmetic Dentistry:** Whitening, veneers, and smile makeovers.
+- **Restorative Care:** Implants, crowns, and bridges.
+- **Orthodontics:** Invisalign and traditional braces.
+- **Emergency Care:** Same-day appointments for urgent needs.
+- **Animation:** Fade up with delay for each card.
+
+### 5. Testimonials
+*Display these 3 reviews in a nice card format:*
+1. "The staff is friendly and professional. Dr. Frank has been my dentist for many years and my family and I are very pleased with him and his staff." — *Carol Burelle*
+2. "Great care and friendly staff! I always have a great experience there. Listening and addressing all concerns, never rushing!" — *Claudia Popescu*
+3. "Awesome experience always. Melissa is so kind and gentle. I used to be very anxious about going to the dentist and she always puts me at ease." — *Nicole Standen*
+
+### 6. Appointment Scheduling (Demo)
+- **Form Fields:** Name, Phone, Email, Preferred Date, Reason for Visit.
+- **Functionality:** This is a demo. On submit, just show a browser alert: "Thank you! We will contact you shortly to confirm."
+- **Animation:** Zoom in or fade up.
+
+### 7. Location & Contact
+- **Address:** Detroit, MI (Use the location from the map link)
+- **Phone:** +1 313-822-4200
+- **Social Links:**
+  - Facebook: https://www.facebook.com/briarwoodfamilydental/
+  - Instagram: https://www.instagram.com/restorationdental__/
+- **Google Map:** Embed the map using the location coordinates or CID.
+  - Map Link: https://maps.google.com/?cid=13697150108144146060
+  - *Note: Ensure the iframe points to the correct location.*
+
+### 8. Footer
+- Copyright © 2025 Gray Family Dental.
+- Simple links.
+
+## Design Guidelines
+- **Visual Style:** Clean, medical/professional but warm (blues, whites, soft grays).
+- **Animations:** Use the AOS library to animate elements as they scroll into view (fade-up, zoom-in, slide-left/right).
+- **Responsiveness:** Must look good on mobile and desktop.
+- **Simplicity:** Do not overengineer. No backend database required. No automated tests.
+
+## Implementation Steps
+1. Initialize React + Vite project.
+2. Install Tailwind CSS and AOS (`npm install aos`).
+3. Create components for each section.
+4. Add the provided dummy images (placeholders if files missing).
+5. Ensure the Google Maps iframe works.
+6. Verify scroll animations work smoothly.

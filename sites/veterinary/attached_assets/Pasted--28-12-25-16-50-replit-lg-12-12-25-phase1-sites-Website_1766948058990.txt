@@ -1,0 +1,86 @@
+----
+## 28.12.25-16:50 - replit - lg-12.12.25-phase1-sites
+----
+# Website Prompt: La Fond Veterinary Hospital
+
+**Goal:** Create a warm, welcoming, and professional landing page for "La Fond Veterinary Hospital". This is a demo site, so keep the implementation straightforward (no complex backend).
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+- **`react-booking-calendly`** (REQUIRED for appointments)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.jpg` (IMPORTANT: Apply CSS `rounded-full` to make this a circular logo).
+- `cute-small-dogs-banner.jpg`
+- `funny-dog.jpg`
+- `funny-dog-2.jpg`
+- `funny-cat.jpg`
+
+## Structure & Content
+
+### 1. Global Features
+- **Bilingual Support:** 
+  - Languages: English (EN) and Ukrainian (UA).
+  - Toggle: Add a switch in the navbar.
+  - Auto-detect: If user locale is UA, default to UA. Otherwise EN.
+
+### 2. Header
+- **Logo:** Display `favicon.jpg` as a circle next to the text "La Fond Veterinary Hospital".
+- **Navigation:** Home, Services, Happy Patients, Contact.
+- **Controls:** Language Toggle (EN/UA), "Book Visit" button.
+
+### 3. Hero Section
+- **Background:** `cute-small-dogs-banner.jpg` with a soft, warm overlay.
+- **Headline:** "Compassionate Care for Your Best Friend."
+- **Subheadline:** "Trusted veterinary services in Detroit. We treat your pets like family."
+- **CTA:** "Schedule Checkup" (Scrolls to appointment).
+- **Animation:** Gentle fade up.
+
+### 4. Services (Cards)
+*Use Lucide icons (e.g., Heart, Stethoscope, Pill).*
+- **Wellness Exams:** Routine checkups to keep them healthy.
+- **Emergency Care:** We are here when you need us most.
+- **Dental Services:** Cleaning and care for a bright smile.
+- **Surgery:** Advanced care with a gentle touch.
+- **Vaccinations:** Protection against common diseases.
+
+### 5. "Happy Patients" (Fun Gallery)
+*Show the personality of the clinic.*
+- **Headline:** "Paws, Claws, and Happy Tails."
+- **Grid:** Display `funny-dog.jpg`, `funny-dog-2.jpg`, and `funny-cat.jpg` in a playful layout.
+- **Caption:** "We love them as much as you do!"
+- **Animation:** Bounce or zoom in on scroll.
+
+### 6. Testimonials
+*Real reviews from Google Maps:*
+1. "LaFond Vet is simply amazing. Dr. Carter and her staff are one-of-a-kind. We did not feel pressured into any specific treatment." — *Hali M.*
+2. "They took us in on a Friday evening after they were closed to help a stray. They were not only kind and gentle with the kitty, but to us as well." — *Nikki Tucker*
+3. "I've had 2 emergencies with my puppy and both times Dr. Carter got me right in. Me and my animals feel safe and well taken care of." — *Angela*
+
+### 7. Appointment Scheduling (CRITICAL)
+- **Library:** **`react-booking-calendly`** (or similar visual calendar).
+- **Functionality:**
+  - Visual date/time picker.
+  - **Availability:** Mon-Sat, 9 AM - 6 PM.
+  - **Action:** User selects slot -> Confirms.
+  - **Feedback:** Show a success animation (e.g., paw print high-five) and alert: "Appointment Confirmed for [Date] at [Time]!"
+- **Constraint:** **NO BACKEND**. **NO DATABASE**. Handle state locally.
+
+### 8. Location & Contact
+- **Address:** 3191 Eight Mile Road, Detroit, MI 48221
+- **Phone:** +1 313-862-4585
+- **Socials:**
+  - *Note: Social links omitted as verified links were unavailable.*
+- **Map:** Embed Google Maps (CID: 10785879703078397861).
+
+### 9. Footer
+- Copyright © 2025 La Fond Veterinary Hospital.
+- Logo: Circular `favicon.jpg`.
+
+## Design Guidelines
+- **Theme:** Medical, clean, friendly (Teal, Soft Green, White).
+- **Animations:** AOS library for engaging scroll effects.
+- **Simplicity:** **NO BACKEND**. **NO TESTING**. Frontend demo only.

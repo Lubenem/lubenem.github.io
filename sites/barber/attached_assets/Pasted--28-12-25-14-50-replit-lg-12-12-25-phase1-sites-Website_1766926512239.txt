@@ -1,0 +1,86 @@
+----
+## 28.12.25-14:50 - replit - lg-12.12.25-phase1-sites
+----
+# Website Prompt: Latinos Barbershop
+
+**Goal:** Create a modern, stylish, and responsive landing page for "Latinos Barbershop". This is a demo site, so keep the implementation straightforward and simple (no backend, no DB, no testing).
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+- `react-booking-calendly` (for appointments)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.jpg`
+- `interior-banner.jpg`
+- `haircut-example2.jpg`
+- `haircut-example1.jpg`
+- `haircut-example3.jpg`
+
+## Structure & Content
+
+### 1. Global Features
+- **Bilingual Support:** 
+  - Languages: English (EN) and Ukrainian (UA).
+  - Toggle: Add a switch in the navbar.
+  - Auto-detect: If user locale is UA, default to UA. Otherwise EN.
+
+### 2. Header
+- **Logo:** "Latinos Barbershop" (Bold text or icon).
+- **Navigation:** Home, Services, Gallery, Contact.
+- **Controls:** Language Toggle (EN/UA), "Book Now" button.
+
+### 3. Hero Section
+- **Background:** `interior-banner.jpg` with a dark overlay.
+- **Headline:** "Sharp Cuts, Classic Style."
+- **Subheadline:** "The best fade in Little Rock. Experience authentic grooming."
+- **CTA:** "Book Your Cut" (Scrolls to appointment).
+- **Animation:** Fade up.
+
+### 4. Services (Cards)
+*Use Lucide icons.*
+- **Men's Haircut:** Fades, tapers, and classic cuts.
+- **Beard Trim:** Sculpting and shaping with razor finish.
+- **Hot Towel Shave:** Traditional straight razor shave.
+- **Line Up:** Crisp edge-ups for a sharp look.
+- **Kids Haircut:** Patient and stylish cuts for the little ones.
+
+### 5. Gallery / Work
+- Display `haircut-example1.jpg`, `haircut-example2.jpg`, `haircut-example3.jpg` in a clean grid.
+- **Animation:** Zoom in on scroll.
+
+### 6. Testimonials
+*Real reviews from Google Maps:*
+1. "These barbers understand what a fade is and do great work!" — *L. Gilder*
+2. "Incredible service! Best haircut I've had in years." — *Fabrisio*
+3. "Great attention to detail. I haven't had a cut this good in a long time." — *Jose Manuel Morales*
+
+### 7. Appointment Scheduling
+- **Library:** `react-booking-calendly`.
+- **Setup:** 
+  - Availability: Mon-Sat, 9 AM - 7 PM.
+  - Add a few "reserved" slots for realism.
+  - On submit: Show alert "Appointment Confirmed for [Date] at [Time]".
+- **Style:** Dark/Modern theme to match the barbershop vibe.
+
+### 8. Location & Contact
+- **Address:** 7212 Geyer Springs Rd #5, Little Rock, AR 72209
+- **Phone:** +1 501-265-9880
+- **Socials:**
+  - Facebook: https://www.facebook.com/LatinosBarbershopLR/
+  - Instagram: https://www.instagram.com/LatinosBarbershopandSalonLLC/
+- **Map:** Embed Google Maps (CID: 11499201660226825589).
+
+### 9. Footer
+- Copyright © 2025 Latinos Barbershop.
+
+## Logo
+- `favicon.jpg`, round the image to create a circle.
+- use for topbar, footer and favicon
+
+## Design Guidelines
+- **Theme:** Urban, masculine, modern (Black, White, Gold/Yellow accents).
+- **Animations:** Smooth fade-ups and slide-ins using AOS.
+- **Simplicity:** Frontend only. No backend.

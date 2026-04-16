@@ -1,0 +1,80 @@
+# Website Prompt: Flex & Flow Massage
+
+**Goal:** Create a calming, modern, and responsive landing page for "Flex & Flow Massage". This is a demo site, so keep the implementation straightforward (no complex backend).
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+- **`react-booking-calendly`** (REQUIRED for appointments)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.jpg` (round it to make a circle)
+- `interior-banner.jpg`
+- `massage-process-example1.jpg`
+- `massage-process-example2.jpg`
+- `massage-process-example3.jpg`
+
+## Structure & Content
+
+### 1. Global Features
+- **Bilingual Support:** 
+  - Languages: English (EN) and Ukrainian (UA).
+  - Toggle: Add a switch in the navbar.
+  - Auto-detect: If user locale is UA, default to UA. Otherwise EN.
+
+### 2. Header
+- **Logo:** "Flex & Flow" (Text or simple icon).
+- **Navigation:** Home, Services, Gallery, Contact.
+- **Controls:** Language Toggle (EN/UA), "Book Session" button.
+
+### 3. Hero Section
+- **Background:** `interior-banner.jpg` with a soft overlay.
+- **Headline:** "Restore Your Balance."
+- **Subheadline:** "Expert massage therapy and Thai stretching in El Paso, TX."
+- **CTA:** "Book Your Session" (Scrolls to appointment).
+- **Animation:** Slow fade up.
+
+### 4. Services (Cards)
+*Use Lucide icons (e.g., Hand, Activity, Heart).*
+- **Deep Tissue:** Relieve chronic muscle tension.
+- **Swedish Massage:** Gentle relaxation and stress relief.
+- **Thai Stretching:** Assisted stretching to improve flexibility.
+- **Sports Massage:** Recovery for athletes and active lifestyles.
+- **Cupping Therapy:** Improve blood flow and reduce inflammation.
+
+### 5. Gallery / Atmosphere
+- Display `massage-process-example1.jpg`, `massage-process-example2.jpg`, `massage-process-example3.jpg` in a clean, masonry or grid layout.
+- **Animation:** Gentle zoom-in on scroll.
+
+### 6. Testimonials
+*Real reviews from Google Maps:*
+1. "Best massage in El Paso! The Thai stretching really helped my back pain." — *Sarah M.*
+2. "Incredible experience. Professional, clean, and very relaxing." — *Mike R.*
+3. "I felt like a new person after my session. Highly recommend for deep tissue work." — *Jessica T.*
+
+### 7. Appointment Scheduling (CRITICAL)
+- **Library:** You **MUST** use `react-booking-calendly` (or a similar visual calendar component).
+- **Functionality:**
+  - Display a visual calendar with date/time slots.
+  - **Availability:** Mon-Sat, 10 AM - 6 PM.
+  - **Interaction:** User picks a slot -> Enters details -> Clicks "Confirm".
+  - **Success State:** Show a beautiful success animation (e.g., a checkmark fading in) and an alert: "Session Confirmed for [Date] at [Time]".
+- **Constraint:** **NO BACKEND**. **NO DATABASE**. Handle state locally in React.
+
+### 8. Location & Contact
+- **Address:** 4640 Doniphan Dr Bldg C, El Paso, TX 79922
+- **Phone:** +1 915-257-2595
+- **Socials:**
+  - Facebook: https://www.facebook.com/epcocoon/
+  - Instagram: https://www.instagram.com/flexandflow_massage/
+- **Map:** Embed Google Maps (CID: 11061650366042737244).
+
+### 9. Footer
+- Copyright © 2025 Flex & Flow Massage.
+
+## Design Guidelines
+- **Theme:** Calming, holistic, spa-like (Soft Greens, Beiges, White).
+- **Animations:** Smooth, slow transitions using AOS.
+- **Simplicity:** **NO BACKEND**. **NO TESTING**. Do not overengineer.

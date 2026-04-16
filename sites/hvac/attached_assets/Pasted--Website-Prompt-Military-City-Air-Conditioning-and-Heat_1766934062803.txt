@@ -1,0 +1,91 @@
+# Website Prompt: Military City Air Conditioning and Heating
+
+**Goal:** Create a professional, reliable, and high-converting landing page for "Military City Air Conditioning and Heating". This is a demo site, so keep the implementation straightforward (no complex backend).
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+- **`react-booking-calendly`** (REQUIRED for appointments)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.jpg` (IMPORTANT: Apply CSS `rounded-full` to make this a circular logo).
+- `cool-company-car-banner.jpg`
+- `funny-meme-about-company.jpg`
+- `before-dirty-bushy-ac-1-tile.jpg`
+- `after-clean-ac-1-tile.jpg`
+- `before-after-4-tiles.jpg`
+
+## Structure & Content
+
+### 1. Global Features
+- **Bilingual Support:** 
+  - Languages: English (EN) and Ukrainian (UA).
+  - Toggle: Add a switch in the navbar.
+  - Auto-detect: If user locale is UA, default to UA. Otherwise EN.
+
+### 2. Header
+- **Logo:** Display `favicon.jpg` as a circle next to the text "Military City Air".
+- **Navigation:** Home, Services, Our Work, Contact.
+- **Controls:** Language Toggle (EN/UA), "Get a Quote" button.
+
+### 3. Hero Section
+- **Background:** `cool-company-car-banner.jpg` with a semi-dark overlay to make text pop.
+- **Headline:** "Serving San Antonio with Honor & Excellence."
+- **Subheadline:** "Reliable AC and Heating solutions for your home and business."
+- **CTA:** "Schedule Service" (Scrolls to appointment).
+- **Animation:** Strong fade up.
+
+### 4. Services (Grid)
+*Use Lucide icons (e.g., Fan, Thermometer, Wrench).*
+- **AC Repair & Install:** Keeping you cool in the Texas heat.
+- **Heating Services:** Reliable warmth when you need it.
+- **Preventative Maintenance:** Extend the life of your system.
+- **Air Quality:** Breathe easier with our filtration solutions.
+- **Emergency Service:** Fast response when it matters most.
+
+### 5. "Why Choose Us" (Fun & Real)
+- **Image:** `funny-meme-about-company.jpg` (Use this to show personality/humor).
+- **Text:** "We take our work seriously, but not ourselves. Honest pricing, no hidden fees, and a job done right the first time."
+- **Animation:** Slide in from the side.
+
+### 6. Our Work (Before & After)
+*Showcase the transformation.*
+- **Layout:** A comparison section or slider.
+- **Images:** 
+  - Pair `before-dirty-bushy-ac-1-tile.jpg` with `after-clean-ac-1-tile.jpg`.
+  - Display `before-after-4-tiles.jpg` as a grid of success stories.
+- **Caption:** "See the difference professional maintenance makes."
+
+### 7. Testimonials
+*Realistic reviews:*
+1. "Incredible service! They came out same-day and fixed our AC in the middle of July. Lifesavers!" — *Mark R.*
+2. "Honest and professional. They didn't try to upsell me on things I didn't need. Highly recommend." — *Sarah Jenkins*
+3. "Great team, very respectful of my home. The new unit works perfectly." — *David G.*
+
+### 8. Appointment Scheduling (CRITICAL)
+- **Library:** **`react-booking-calendly`** (or similar visual calendar).
+- **Functionality:**
+  - Visual date/time picker.
+  - **Availability:** Mon-Fri, 8 AM - 6 PM.
+  - **Action:** User selects slot -> Confirms.
+  - **Feedback:** Show a success animation (checkmark) and alert: "Service Request Sent for [Date] at [Time]!"
+- **Constraint:** **NO BACKEND**. **NO DATABASE**. Handle state locally.
+
+### 9. Location & Contact
+- **Address:** San Antonio, TX
+- **Phone:** +1 210-900-4232
+- **Socials:**
+  - Facebook: https://www.facebook.com/militarycityair/
+  - Instagram: https://www.instagram.com/militarycityair/
+- **Map:** Embed Google Maps (CID: 1658222662859154883).
+
+### 10. Footer
+- Copyright © 2025 Military City Air Conditioning and Heating.
+- Logo: Circular `favicon.jpg`.
+
+## Design Guidelines
+- **Theme:** Professional, bold, trustworthy (Navy Blue, Red/White accents, or Camo Green hints if appropriate, but keep it clean).
+- **Animations:** AOS library for engaging scroll effects.
+-

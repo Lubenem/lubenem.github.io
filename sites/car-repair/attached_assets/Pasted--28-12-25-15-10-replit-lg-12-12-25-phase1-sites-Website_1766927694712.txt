@@ -1,0 +1,83 @@
+----
+## 28.12.25-15:10 - replit - lg-12.12.25-phase1-sites
+----
+# Website Prompt: Nichols Automotive Service Center
+
+**Goal:** Create a modern, reliable, and responsive landing page for "Nichols Automotive Service Center". This is a demo site, so keep the implementation straightforward (no backend).
+
+**Tech Stack:**
+- React (Vite)
+- Tailwind CSS (for styling)
+- AOS (Animate On Scroll) library for scroll animations
+- Lucide React (for icons)
+- `react-booking-calendly` (for appointments)
+
+**Assets Available (assume these exist in `public/assets/`):**
+- `favicon.jpg` (Use this as the Logo: round the image via CSS to create a circle).
+- `multiple-cars-banner.jpg`
+- `car1.jpg`
+- `car2.jpg`
+- `car3.jpg`
+
+## Structure & Content
+
+### 1. Global Features
+- **Bilingual Support:** 
+  - Languages: English (EN) and Ukrainian (UA).
+  - Toggle: Add a switch in the navbar.
+  - Auto-detect: If user locale is UA, default to UA. Otherwise EN.
+
+### 2. Header
+- **Logo:** Display `favicon.jpg` rounded as a circle next to the text "Nichols Automotive".
+- **Navigation:** Home, Services, Gallery, Contact.
+- **Controls:** Language Toggle (EN/UA), "Book Service" button.
+
+### 3. Hero Section
+- **Background:** `multiple-cars-banner.jpg` with a dark overlay.
+- **Headline:** "Reliable Auto Care in Augusta."
+- **Subheadline:** "Honest service, expert mechanics, and fair prices since 2005."
+- **CTA:** "Schedule Repair" (Scrolls to appointment).
+- **Animation:** Fade up.
+
+### 4. Services (Cards)
+*Use Lucide icons (e.g., Wrench, Car, Thermometer).*
+- **Wheel Alignment:** Precision alignment for smoother driving.
+- **Brake Services:** Inspection, repair, and pad replacement.
+- **Engine Diagnostics:** Advanced troubleshooting and repair.
+- **A/C & Heating:** Keep your cabin comfortable year-round.
+- **General Maintenance:** Oil changes, fluids, and tune-ups.
+
+### 5. Gallery / Work
+- Display `car1.jpg`, `car2.jpg`, `car3.jpg` in a clean grid.
+- **Animation:** Zoom in on scroll.
+
+### 6. Testimonials
+*Real reviews from Google Maps:*
+1. "I totally recommend this shop. They fixed my alignment where another shop said they couldn't get it right. Price was reasonable." — *Jeff Moore*
+2. "Nichols Automotive has been my garage of choice since 2005. Mike and Laura treat their customers like family!" — *Colleen Lofgren*
+3. "Mike offered some assistance freely and a kind handshake. I would recommend them for any and all potential needs." — *Dinkle Burg*
+
+### 7. Appointment Scheduling
+- **Library:** `react-booking-calendly`.
+- **Setup:** 
+  - Availability: Mon-Fri, 8 AM - 5 PM.
+  - Add a few "reserved" slots for realism.
+  - On submit: Show alert "Service Request Confirmed for [Date] at [Time]".
+- **Style:** Clean, professional look (Blues/Greys).
+
+### 8. Location & Contact
+- **Address:** 3901 Washington Rd, Augusta, GA 30907
+- **Phone:** +1 706-650-3130
+- **Socials:**
+  - Facebook: https://www.facebook.com/p/Nichols-Automotive-Service-Center-Inc-100057555763776/
+  - *Note: No Instagram link available.*
+- **Map:** Embed Google Maps (CID: 11726718605829855828).
+
+### 9. Footer
+- Copyright © 2025 Nichols Automotive Service Center.
+- Logo: Display `favicon.jpg` rounded.
+
+## Design Guidelines
+- **Theme:** Trustworthy, industrial, clean (Navy Blue, White, Steel Grey).
+- **Animations:** Smooth fade-ups and slide-ins using AOS.
+- **Simplicity:** Frontend only. No backend. No automated tests.

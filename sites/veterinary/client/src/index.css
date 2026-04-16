@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Medical Teal & Soft Green Palette - Friendly & Professional */
+  --font-sans: 'Nunito', sans-serif;
+  --font-display: 'Fredoka', sans-serif; /* Friendly rounded font for headings */
+
+  --background: 0 0% 100%; /* White */
+  --foreground: 195 40% 20%; /* Dark Teal-Grey */
+
+  --primary: 174 55% 45%; /* Teal */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 145 40% 90%; /* Very Light Green/Mint */
+  --secondary-foreground: 174 55% 35%; /* Darker Teal */
+
+  --muted: 195 20% 96%; /* Light Blue-Grey */
+  --muted-foreground: 195 20% 50%;
+
+  --accent: 35 90% 65%; /* Warm Orange/Gold for CTAs */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 195 20% 90%;
+  --input: 195 20% 90%;
+  --ring: 174 55% 45%;
+
+  --radius: 1rem; /* Soft rounded corners */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-semibold tracking-tight;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-secondary/30;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-colors;
+}
+
+/* Animations */
+@keyframes paw-wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+.animate-paw {
+  animation: paw-wave 1.5s ease-in-out infinite;
+}
+
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-white/50 shadow-xl;
+}

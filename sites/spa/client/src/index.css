@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Natural/Spa Palette */
+  /* Primary: Deep Sage Green */
+  --primary: 135 15% 35%;
+  --primary-foreground: 60 30% 96%;
+  
+  /* Background: Warm Beige/Cream */
+  --background: 40 33% 98%;
+  --foreground: 135 10% 20%;
+  
+  /* Card: White with slight warmth */
+  --card: 0 0% 100%;
+  --card-foreground: 135 10% 20%;
+  
+  /* Secondary: Soft Earth/Sand */
+  --secondary: 40 20% 92%;
+  --secondary-foreground: 135 15% 35%;
+  
+  /* Muted: Subtle Gray-Green */
+  --muted: 135 10% 94%;
+  --muted-foreground: 135 5% 45%;
+  
+  /* Accent: Terracotta/Clay (for calls to action) */
+  --accent: 25 40% 50%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 60% 50%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 135 10% 85%;
+  --input: 135 10% 85%;
+  --ring: 135 15% 35%;
+  
+  --radius: 0.75rem;
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Lato', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-sans selection:bg-primary/20;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-medium tracking-tight;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
+}
+
+/* Utilities */
+.text-balance {
+  text-wrap: balance;
+}
