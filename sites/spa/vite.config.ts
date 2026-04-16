@@ -3,7 +3,15 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
+const basePath = (() => {
+  const raw = process.env.BASE_PATH || "/";
+  if (raw === "/") return "/";
+  const normalized = raw.startsWith("/") ? raw : `/${raw}`;
+  return normalized.endsWith("/") ? normalized : `${normalized}/`;
+})();
+
 export default defineConfig({
+  base: basePath,
   plugins: [
     react(),
     runtimeErrorOverlay(),
