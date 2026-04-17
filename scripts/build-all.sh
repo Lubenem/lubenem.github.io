@@ -24,7 +24,16 @@ for site in "${SITES[@]}"; do
     (cd "$SITE_DIR" && npm install)
   fi
 
-  BASE_PATH="$BASE_PREFIX/$site"
+  if [[ "$site" == "portfolio" ]]; then
+    if [[ -n "$BASE_PREFIX" ]]; then
+      BASE_PATH="$BASE_PREFIX"
+    else
+      BASE_PATH="/"
+    fi
+  else
+    BASE_PATH="$BASE_PREFIX/$site"
+  fi
+
   BASE_PATH="${BASE_PATH//\/\//\/}"
   VITE_BASE_PATH="$BASE_PATH"
   (cd "$SITE_DIR" && BASE_PATH="$BASE_PATH" VITE_BASE_PATH="$VITE_BASE_PATH" npm run build)

@@ -24,6 +24,7 @@ const basePrefix = (() => {
 })();
 
 const mountPath = (slug) => `${basePrefix}/${slug}`.replace(/\/+/g, "/");
+const baseRoot = basePrefix || "/";
 
 function availableSites() {
   return sites.map((slug) => {
@@ -47,10 +48,13 @@ siteStatus.forEach(({ slug, dist, ready }) => {
     return;
   }
 
-  const mount = mountPath(slug);
-  app.use(mount, express.static(dist, { index: false }));
-  app.get([mount, `${mount}/*`], (_req, res) => {
-    res.sendFile(path.join(dist, "index.html"));
+  const mounts = slug === "portfolio" ? [baseRoot, mountPath(slug)] : [mountPath(slug)];
+
+  mounts.forEach((mount) => {
+    app.use(mount, express.static(dist, { index: false }));
+    app.get([mount, `${mount}/*`], (_req, res) => {
+      res.sendFile(path.join(dist, "index.html"));
+    });
   });
 });
 
@@ -58,7 +62,7 @@ app.get("/", (_req, res) => {
   const rows = siteStatus
     .map(({ slug, ready }) => {
       const status = ready ? "ready" : "missing build";
-      const href = `${mountPath(slug)}/`;
+      const href = slug === "portfolio" ? `${baseRoot}` : `${mountPath(slug)}/`;
       return `<li><a href="${href}">${href}</a> – ${status}</li>`;
     })
     .join("\n");

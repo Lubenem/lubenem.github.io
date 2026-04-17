@@ -27,3 +27,18 @@ same with the `<img src="/assets/favicon.jpg" alt="Latinos Barbershop Logo" clas
 icon
 
 * all other sites seem to have all images loaded properly
+
+##
+
+Good! 
+Let's make the `portfolio` page the main page which will open by default with a default route 
+
+also when we do `BASE_PREFIX=/portfolio` 
+`portfolio/portfolio` is the route for the `portfolio` site 
+I don't like how it looks, could we just drop the prefix, why do we even need it?
+
+Make the `portfolio` the main site , and a new section (call it `portfolio`)
+there show a nice list of placeholder png pictures (I will feel them with a screenshot of each site)
+when the user clicks on image/item from portfolio list => he should be redirected to the appropriate site (route)
+the list should be addaptable for different screens (flex)
+
