@@ -26,12 +26,12 @@ export function PortfolioList() {
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {sites.map((site) => (
             <a
               key={site.slug}
               href={`${base}${site.slug}/`}
-              className="group relative block overflow-hidden rounded-xl border border-border bg-card shadow-sm hover:shadow-lg transition-shadow"
+              className="group relative block overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-transform transition-shadow duration-150 ease-out hover:scale-[1.04] hover:shadow-lg"
             >
               <div className="aspect-[4/3] bg-muted relative overflow-hidden">
                 <img

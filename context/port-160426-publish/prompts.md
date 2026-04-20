@@ -42,3 +42,27 @@ there show a nice list of placeholder png pictures (I will feel them with a scre
 when the user clicks on image/item from portfolio list => he should be redirected to the appropriate site (route)
 the list should be addaptable for different screens (flex)
 
+##
+let's apply some UI fixes for the portfolio site
+[~/projects/portfolio/sites/portfolio](~/projects/portfolio/sites/portfolio)
+
+1. #portfolio > div > div.grid.gap-6.sm\:grid-cols-2.lg\:grid-cols-3
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+for bigger screens let's make it so we have 2 rows and 5 columns
+(let's just change `repeat(3..` to `repeat(5..`)
+
+2. #portfolio > div > div.grid.gap-6.sm\:grid-cols-2.lg\:grid-cols-3 > a:nth-child(5) 
+also, on hover, each element of the sites list, should have a nice little (and quick) stretch animation. 
+subtle but nice, just make them abit bigger on hover, and then they should go to the original size on mouse leave, keep it simple
+
+##
+
+nice! 
+
+#about > div > div.grid.grid-cols-1.md\:grid-cols-3.gap-4.md\:gap-6
