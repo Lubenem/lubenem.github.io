@@ -43,9 +43,11 @@ export function PortfolioList() {
                     className="absolute inset-0 h-full w-full object-cover"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
+                      const fallback = e.currentTarget.nextElementSibling;
+                      if (fallback) fallback.classList.remove("hidden");
                     }}
                   />
-                  <div className="absolute inset-0">
+                  <div className="absolute inset-0 hidden">
                     <div className="flex h-full w-full items-center justify-center">
                       <div className="w-24 h-24 rounded-lg bg-muted-foreground/10 border border-dashed border-muted-foreground/40 flex items-center justify-center text-muted-foreground text-xs uppercase tracking-wide text-center leading-tight">
                         Screenshot
