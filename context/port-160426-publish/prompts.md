@@ -65,4 +65,9 @@ subtle but nice, just make them abit bigger on hover, and then they should go to
 
 nice! 
 
-#about > div > div.grid.grid-cols-1.md\:grid-cols-3.gap-4.md\:gap-6
+1. #about > div > div.grid.grid-cols-1.md\:grid-cols-3.gap-4.md\:gap-6
+other elements in the portfolio site, come to existence (on page load) with a nice animation (and fade out),
+but our new site items list, pops up simply..
+could we align our site items list to the old flow of the site?
+
+2. also when I click on a demo site element, I want to be redirected to a new tab, please change current behavior of opening the demo straight in the same tab
