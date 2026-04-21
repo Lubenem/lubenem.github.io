@@ -80,3 +80,11 @@ Ok, it seems like we are done with the UI fixes, Now I want to publish/host our 
 - as I understood, the github pages should use this folder, but it seems like our latest UI fixes didn't affect this folder (I checked git) 
 
 care to explain?
+
+##
+
+Ok, I've done two important things:
+
+1. I've renamed the github repo into `lubenem.github.io`
+2. Also I've bought the `liutech.org` domain on the namecheap and added the github A records (IP addresses)
+the liutech.org seem to point to our github page correctly, but it is blank currently. Could we fix that?

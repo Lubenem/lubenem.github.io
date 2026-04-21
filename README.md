@@ -42,18 +42,26 @@ BASE_PATH=/barber VITE_BASE_PATH=/barber npm run dev
 ## Deploying
 Each built site lives in `sites/<site>/dist/public` and already expects to be served from `/<site>/`. Upload those folders to GitHub Pages (or any static host) under matching paths and everything will resolve correctly.
 
-### GitHub Pages (project site) hints
-- Pages for a repo are served from `https://<user>.github.io/<repo>/…`. Because the repo name is part of the URL, a base prefix is required so assets/routes resolve correctly.
+### GitHub Pages hints
+- Project repo (`https://<user>.github.io/<repo>/...`) needs base prefix `/<repo>`.
+- User/org repo named `<user>.github.io` is served from root `/` (no prefix).
 - One-shot export (recommended):
   ```bash
   ./scripts/export-gh-pages.sh
   ```
-  The script auto-detects the repo name and uses it as `BASE_PREFIX` (for this repo: `/portfolio`), then rebuilds and stages files into `docs/`.
-  `portfolio` is exported as the default root app (`https://<user>.github.io/portfolio/`), and niche demos are exported under `https://<user>.github.io/portfolio/<slug>/`.
+  The script auto-detects repo type and picks `BASE_PREFIX` automatically:
+  - `<user>.github.io` repo -> `/`
+  - any other repo -> `/<repo-name>/`
+  It rebuilds and stages files into `docs/`, with `portfolio` as the default root app and niche demos under `/<slug>/`.
   Enable GitHub Pages with the **/docs** folder as the source, then commit/push.
+- Custom domain export:
+  ```bash
+  CUSTOM_DOMAIN=liutech.org ./scripts/export-gh-pages.sh
+  ```
+  This also writes `docs/CNAME`, which GitHub Pages uses for domain mapping.
 - Local preview with the same prefix:
   ```bash
-  BASE_PREFIX=/portfolio npm run serve
-  # open http://localhost:4173/portfolio/ (portfolio app)
-  # demos: http://localhost:4173/portfolio/<slug>/
+  npm run serve
+  # open http://localhost:4173/ (portfolio app)
+  # demos: http://localhost:4173/<slug>/
   ```
