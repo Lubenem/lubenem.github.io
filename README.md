@@ -20,12 +20,13 @@ npm run serve
 ```
 Then open `http://localhost:4173` for the site list, or jump straight to `http://localhost:4173/barber`, `.../dentist`, etc. Stop the server anytime with `Ctrl+C` or `pkill -f serve.mjs`.
 
-### Local preview with GitHub Pages paths
-If you want local URLs to match how they’ll be hosted on Pages (e.g., `https://<user>.github.io/portfolio/<slug>/`):
+### Local preview (current setup)
+For this repo (`lubenem.github.io`) and custom domain (`liutech.org`), the site is served from root (`/`), so local preview is:
 ```bash
-BASE_PREFIX=/portfolio ./scripts/build-all.sh
-BASE_PREFIX=/portfolio npm run serve
-# open http://localhost:4173/portfolio/<slug>/
+./scripts/build-all.sh
+npm run serve
+# open http://localhost:4173/ (portfolio app)
+# demos: http://localhost:4173/<slug>/
 ```
 
 ## Develop a single site
@@ -54,14 +55,16 @@ Each built site lives in `sites/<site>/dist/public` and already expects to be se
   - any other repo -> `/<repo-name>/`
   It rebuilds and stages files into `docs/`, with `portfolio` as the default root app and niche demos under `/<slug>/`.
   Enable GitHub Pages with the **/docs** folder as the source, then commit/push.
-- Custom domain export:
+- Custom domain export (current setup):
   ```bash
   CUSTOM_DOMAIN=liutech.org ./scripts/export-gh-pages.sh
   ```
   This also writes `docs/CNAME`, which GitHub Pages uses for domain mapping.
-- Local preview with the same prefix:
+- Publish steps for `liutech.org`:
   ```bash
-  npm run serve
-  # open http://localhost:4173/ (portfolio app)
-  # demos: http://localhost:4173/<slug>/
+  CUSTOM_DOMAIN=liutech.org ./scripts/export-gh-pages.sh
+  git add docs scripts/export-gh-pages.sh README.md
+  git commit -m "Update pages export"
+  git push
   ```
+  In GitHub repo settings: `Pages -> Source: Deploy from a branch -> main -> /docs`, custom domain `liutech.org`, and enable HTTPS.
