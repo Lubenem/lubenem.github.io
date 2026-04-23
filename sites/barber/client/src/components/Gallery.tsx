@@ -1,13 +1,13 @@
 import { useLanguage } from "@/lib/i18n";
 
-const galleryImages = [
-  { src: "/assets/haircut-example1.jpg", alt: "Haircut example 1 - Spider web design" },
-  { src: "/assets/haircut-example2.jpg", alt: "Haircut example 2 - Artistic fade" },
-  { src: "/assets/haircut-example3.jpg", alt: "Haircut example 3 - Hair transformation" },
-];
-
 export function Gallery() {
   const { t } = useLanguage();
+  const base = import.meta.env.BASE_URL;
+  const galleryImages = [
+    { src: `${base}assets/haircut-example1.jpg`, alt: "Haircut example 1 - Spider web design" },
+    { src: `${base}assets/haircut-example2.jpg`, alt: "Haircut example 2 - Artistic fade" },
+    { src: `${base}assets/haircut-example3.jpg`, alt: "Haircut example 3 - Hair transformation" },
+  ];
 
   return (
     <section

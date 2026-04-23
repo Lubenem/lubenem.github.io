@@ -1,1 +1,1 @@
-[] combine all sites into one proj and publish on my github
+[x] combine all sites into one proj and publish on my github
